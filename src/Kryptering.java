@@ -37,6 +37,7 @@ public class Kryptering {
         String line1 = infil.readLine();
         String line2 = nyckelfil.readLine();
         String result = "";
+        String result2 = "";
 
 
 
@@ -61,6 +62,14 @@ public class Kryptering {
             System.out.println(result);
             utfil.println(result);
             utfil.close();
+
+
+            for (int j = 0 ; j < result.length() ; j++) {
+                char xorchar = (char)(result.charAt(j) ^ line2.charAt(j % line2.length()));
+
+                result2 += xorchar;
+            }
+            System.out.println(result2);
         }
 
 
