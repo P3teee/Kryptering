@@ -52,9 +52,7 @@ public class Kryptering {
             for (int i = 0 ; i < line1.length() ; i++) {
                sb.append((char) (line1.charAt(i) ^ line2.charAt(i % line2.length())));
 
-                 //char xorchar = (char)(line1.charAt(i) ^ line2.charAt(i % line2.length()));
-
-                //result += xorchar;
+                 
                 result = sb.toString();
 
 
